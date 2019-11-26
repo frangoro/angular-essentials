@@ -1,0 +1,11 @@
+<p>user-details works!</p>
+<input type="text" [(ngModel)]="item"/>
+<button
+  (click)="onAddItem()"
+  [ngClass]="{'btn-primary':item !=='', 'btn-default':item===''}"
+  >
+  Add Item</button>
+<p *ngIf="number!==0">{{number}}</p>
+<button (click)="onIncrease()" class="btn btn-primary">Increase number</button>
+<ul class="list-group"><li class="list-group-item" *ngFor="let item of items; let i = index"
+  [ngStyle]="{'backgroundColor':i%2===0?'green':'white'}">{{item}}</li></ul>

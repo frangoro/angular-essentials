@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-essentials';
+  rootName = 'Pacome';
+  rootItems = ['a','b','c'];
+
+  onNameChanged(newName) {
+    this.rootName = newName;
+  }
+
+  onItemAdded(newItem) {
+    this.rootItems.push(newItem);
+    console.log(this.rootItems);
+  }
 }

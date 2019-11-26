@@ -1,0 +1,9 @@
+<p>Dashboard</p>
+<div>
+  <button (click)="onPressButton()">Switch State</button>
+</div>
+<!--<p>{{loadState}}</p>-->
+<p [textContent]="loadState"></p>
+<div>
+  <input type="text" [(ngModel)]="loadState"/>
+</div>
