@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { StartWarsService } from '../star-wars.sevice';
-import { summaryFileName } from '@angular/compiler/src/aot/util';
 
 @Component({
   selector: 'app-create-character',
@@ -15,6 +14,7 @@ export class CreateCharacterComponent implements OnInit {
     {display: 'Light', value: 'light'},
     {display: 'Dark', value: 'dark'}
   ];
+  defaultName = 'Obi-Wan';
 
   constructor(swService: StartWarsService) {
     this.swService = swService;
@@ -24,7 +24,7 @@ export class CreateCharacterComponent implements OnInit {
   }
 
   onSubmit(submittedForm) {
-    console.log(submittedForm.value);
+    console.log(submittedForm);
     this.swService.addCharacter(submittedForm.value);
   }
 

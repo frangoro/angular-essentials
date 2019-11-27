@@ -33,6 +33,12 @@ export class StartWarsService {
   }
 
   addCharacter(character) {
+    const pos = this.characters.findIndex(c => {
+      return c.name === character.name;
+    });
+    if (pos !== -1 || character.name === '') {
+      return;
+    }
     this.characters.push(character);
   }
 }
